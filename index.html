@@ -2,7 +2,24 @@
 <html lang="en">
 
 <head>
-  <script src="index.js"></script>
+  <script>
+    var docurl = new URL(document.URL);
+
+    switch (docurl.searchParams.get("p")) {
+      case 'contact':
+        document.title = 'Matthew Richardson TEST Photography | Contact';
+        break;
+      case 'about':
+        document.title = 'Matthew Richardson TEST Photography | About';
+        break;
+      case 'gallery':
+        document.title = 'Matthew Richardson TEST Photography | Gallery';
+        break;
+      default:
+        document.title = 'Matthew Richardson TEST Photography | Home';
+        break;
+    }
+  </script>
   <title>Matthew Richardson TEST Photography | Contact | About | Gallery</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +86,7 @@
   <footer class="jumbotron text-center" style="margin-bottom:0">
     <p>Matthew Richardson TEST Photography &copy;</p>
   </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
